@@ -23,8 +23,6 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
 
 export VIRTUAL_ENVS=~/envs
-export CATALINA_PROJECTS=~/Projects/bitbucket.org/cmcfr_development
-export PATH=$PATH:~/.my_script/
 
 alias g="git"
 alias ls="ls -p -G"
