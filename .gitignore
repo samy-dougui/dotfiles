@@ -1,0 +1,18 @@
+# IDE related
+**/.vscode
+**/.idea
+
+# OS related
+**/.DS_Store
+
+# Terraform files
+**/.terraform/
+
+# Javascript files
+**/node_modules/
+
+# Python files
+**/__pycache__/
+
+# Always include gitkeep
+!/**/.gitkeep
