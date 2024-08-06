@@ -1,0 +1,19 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+add_newline = false
+format = "$all$kubernetes$line_break$character"
+
+[directory]
+fish_style_pwd_dir_length = 2
+
+
+[kubernetes]
+disabled = false
+format = 'on [⎈  $namespace \($context\)](dimmed green) '
+detect_folders = ["k8s", "manifests", "manifest"]
+
+
+[helm]
+disabled = true
+detect_files = ["helmfile.yaml", "helmfile.yml", "Chart.yaml", "Chart.yml"]

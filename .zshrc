@@ -23,7 +23,10 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
 
 export VIRTUAL_ENVS=~/envs
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init zsh)"
 
+# Move alias to dedicated file / folder
 alias g="git"
 alias ls="ls -p -G"
 alias la="ls -A"
