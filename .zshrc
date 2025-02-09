@@ -1,6 +1,8 @@
 # todo: once the nvim config is correctly set, edit this to nvim
 export EDITOR=nvim 
-
+export GOPATH=$HOME/go/bin/
+export VIRTUAL_ENVS=~/envs
+export PATH=$PATH:$GOPATH # <- this way, pkg installed with go install are in the PATH
 ## START Starship configuration
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
