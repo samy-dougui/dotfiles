@@ -51,3 +51,5 @@ zle -N edit-command-line
 bindkey "^[v" edit-command-line
 # END ZSH config
 
+# Load aliases
+source ./.zshrc_aliases
