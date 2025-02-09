@@ -1,0 +1,11 @@
+# GIT
+alias g="git"
+alias gst="git status"
+alias last_commit="git rev-parse @"
+alias last_commit_short="git rev-parse --short @"
+
+
+# CORE
+alias ls="ls -p -G"
+alias la="ls -A"
+alias ll="exa -l -g --icons"
