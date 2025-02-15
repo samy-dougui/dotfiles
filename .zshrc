@@ -12,7 +12,7 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 type starship_zle-keymap-select >/dev/null || \
   {
     echo "Load starship"
-    eval "$(/usr/local/bin/starship init zsh)"
+    eval "$(starship init zsh)"
   }
 
 ## END Startship configuration
