@@ -13,3 +13,8 @@
   - `brew install gqh`
 - [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
   - I used `fira-code`
+
+
+  ## Next step
+
+  - [ ] Script to install all dependencies needed for the configuration defined here

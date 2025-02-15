@@ -2,7 +2,7 @@
 
 
 add_newline = false
-format = "$all$kubernetes$line_break$character"
+format = "$directory$gi_branch$git_commit$git_state$git_metrics$git_status$python$kubernetes$line_break$character"
 
 [directory]
 fish_style_pwd_dir_length = 2
@@ -10,7 +10,7 @@ fish_style_pwd_dir_length = 2
 
 [kubernetes]
 disabled = false
-format = 'on [⎈  $namespace \($context\)](dimmed green) '
+format = 'on [⎈ $namespace \($context\)](dimmed green) '
 detect_folders = ["k8s", "manifests", "manifest"]
 
 
