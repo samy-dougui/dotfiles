@@ -52,4 +52,4 @@ bindkey "^[v" edit-command-line
 # END ZSH config
 
 # Load aliases
-source ./.zshrc_aliases
+source $HOME/.zshrc_aliases
