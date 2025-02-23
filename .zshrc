@@ -1,4 +1,3 @@
-# todo: once the nvim config is correctly set, edit this to nvim
 export EDITOR=nvim 
 export GOPATH=$HOME/go/bin/
 export VIRTUAL_ENVS=~/envs

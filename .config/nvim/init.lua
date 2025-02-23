@@ -1,21 +1,25 @@
-require "core"
+require("core.keymaps")
+require("core.options")
 
-local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
-
-if custom_init_path then
-  dofile(custom_init_path)
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		error("Error cloning lazy.nvim:\n" .. out)
+	end
 end
-
-require("core.utils").load_mappings()
-
-local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-
--- bootstrap lazy.nvim!
-if not vim.loop.fs_stat(lazypath) then
-  require("core.bootstrap").gen_chadrc_template()
-  require("core.bootstrap").lazy(lazypath)
-end
-
-dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
-require "plugins"
+require("lazy").setup({
+	require("plugins.neotree"),
+	require("plugins.theme"),
+	require("plugins.bufferline"),
+	require("plugins.statusline"),
+	require("plugins.treesitter"),
+	require("plugins.telescope"),
+	require("plugins.lsp"),
+	require("plugins.autocompletion"),
+	require("plugins.autoformatting"),
+	require("plugins.gitsigns"),
+	require("plugins.indent-blankline"),
+})
