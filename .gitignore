@@ -16,3 +16,6 @@
 
 # Always include gitkeep
 !/**/.gitkeep
+
+# tmux
+.config/tmux/plugins/
