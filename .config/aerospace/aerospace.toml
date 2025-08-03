@@ -149,7 +149,10 @@ automatically-unhide-macos-hidden-apps = false
 	if.app-id = 'com.apple.Safari'
 	run = 'move-node-to-workspace W'
 [[on-window-detected]]
-	if.app-name-regex-substring = 'com.jetbrains.*'
+	if.app-id = 'com.jetbrains.intellij.ce'
+	run = 'move-node-to-workspace I'
+[[on-window-detected]]
+	if.app-id = 'com.jetbrains.goland'
 	run = 'move-node-to-workspace I'
 [[on-window-detected]]
 	if.app-id = 'com.tinyspeck.slackmacgap'
